@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIView *blue;
 @property (weak, nonatomic) IBOutlet UIView *green;
 @property (weak, nonatomic) IBOutlet UIView *red;
+@property (weak, nonatomic) IBOutlet UIView *purple;
 
 @end
 
@@ -26,8 +27,6 @@
     -  表示 8pt 分割 Standard Space     a b 之间 8pt     |[a_view]-[b_view]|
     () 圆括号内表示数值
     [] 方括号内表示视图
-    
- 
  
  --方向
     垂直方向    V:[a_view]-10-[b_view]
@@ -41,94 +40,173 @@
  
  --两两
      两两紧贴    [a_view][b_view]
-     两两相等    [a_view(==a_view)]  //  貌似带方向
+     两两相等    [a_view(==b_view)]  //  貌似带方向
  
  --举例
     @"H:|-20-[blue(>=200)]|     贴到 | 父视图的边上
     @"H:|-20-[blue(>=200)]      不会
  
-
+ 
+ 左、中、右对齐
+ 大小相等
+ 在some view 之后
  
  */
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    [self blueCode];
+    [self greenFull];
+    [self yellowFollowRedAndCenterX];
     
-    //  手码的，要去掉 autoresizing
+    [self grayAlignBlueLeft];
+    
+    [self brownInRed];
+}
+
+#pragma mark 手写视图添加 VFL
+- (void)blueCode {
+    
     _blue = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
     _blue.backgroundColor = [UIColor blueColor];
-    [_blue setTranslatesAutoresizingMaskIntoConstraints:NO];
+    _blue.translatesAutoresizingMaskIntoConstraints = NO;   //  手码的，要去掉 autoresizing
     [self.view addSubview:_blue];
+    
     _blue.userInteractionEnabled = YES;
     [_blue addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(push)]];
-
-
-    NSDictionary *views = @{@"blue"     :_blue,
-                            @"green"    :_green,
-                            @"red"      :_red};
-    NSLog(@"\n%@  \n%@",self.view, views);
     
-//    NSString *vf = @"H:|-20-[blue(100)]";
-    NSString *vf = @"H:|-10-[blue]-|";
+    
+    NSDictionary *views = @{@"blue"     :_blue,};
+    NSString *vf;
+    NSArray *lcArray;
+    
+    vf = @"H:|-20-[blue(60)]";
+//    vf = @"H:|-20-[blue]|";
+//    vf = @"H:[blue(200)]";
+    lcArray = [NSLayoutConstraint constraintsWithVisualFormat:vf
+                                                 options:0
+                                                 metrics:nil
+                                                   views:views];
+    [self.view addConstraints:lcArray];
+    
+    vf = @"V:|-20-[blue]-100-|";
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:vf
-                                                                      options:NSLayoutFormatAlignAllCenterX
+                                                                      options:0
                                                                       metrics:nil
                                                                         views:views]];
+}
 
-    NSLayoutConstraint *lc1 = [NSLayoutConstraint constraintWithItem:_blue
-                                                           attribute:NSLayoutAttributeCenterX
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:self.view
-                                                           attribute:NSLayoutAttributeCenterX
-                                                          multiplier:1
-                                                            constant:0];
+#pragma mark IB 的视图冲突 & 简单全屏
+- (void)greenFull {
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[blue]-400-|"
-                                                                      options:NSLayoutFormatAlignAllCenterY
-                                                                      metrics:nil views:views]];
-    
-//    NSLayoutConstraint *lc = [NSLayoutConstraint constraintWithItem:_blue attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:1.0];
-//    [self.view addConstraint:lc];
-//    
-//    [NSLayoutConstraint constraintsWithVisualFormat:@"|-(>=20)-[view(==200)]-(>=20)-|"
-//                                            options: NSLayoutFormatAlignAllCenterX | NSLayoutFormatAlignAllCenterY
-//                                            metrics:nil
-//                                              views:@{@"view" : view}];
-    
+    NSDictionary *views = @{@"green"    :_green};
 
-    //  单独移除某个 item 的 constraint
-//    [self.view removeConstraints:self.view.constraints];
+    //  单独移除某个 item 的 constraint. gree，使之变大
+    //    [self.view removeConstraints:self.view.constraints];
     for (NSLayoutConstraint *lc in self.view.constraints) {
         if (lc.firstItem == _green) {
             [self.view removeConstraint:lc];
         }
     }
-
+    
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[green]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[green]|" options:0 metrics:nil views:views]];
 
-
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[red(<=200)]|" options:0 metrics:nil views:views]];
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[red(<=200)]|" options:0 metrics:nil views:views]];
+    return;
 }
 
-- (void)setupViewConstraints {
-    NSDictionary *views = @{@"blue": self.blue };
-    [self.blue setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view removeConstraints:self.view.constraints];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[blue]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[blue]|" options:0 metrics:nil views:views]];
+#pragma mark 水平居中 & 在某视图下面
+- (void)yellowFollowRedAndCenterX {
+    
+    UIView *yeview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    yeview.backgroundColor = [UIColor yellowColor];
+    yeview.translatesAutoresizingMaskIntoConstraints = NO;   //  手码的，要去掉 autoresizing
+    [self.view addSubview:yeview];
+    
+    NSDictionary *views = @{@"yellow": yeview ,
+                            @"red" : _red};
+
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[red]-20-[yellow(==red)]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[yellow(==red)]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
+    
+    NSLayoutConstraint *lc = [NSLayoutConstraint constraintWithItem:yeview        // view1
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view    //  view 2
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:2            // view2.centerX * multiplier
+                                                           constant:-self.view.bounds.size.width/2];
+                                                        //  multiplier 和 constant 这里故意相互抵消了
+    [self.view addConstraint:lc];
+    
+    //  "view1.attr1 = view2.attr2 * multiplier + constant"
+}
+
+#pragma mark 和某视图左对齐
+- (void)grayAlignBlueLeft {
+    
+    UIView *grayView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    grayView.backgroundColor = [UIColor grayColor];
+    grayView.translatesAutoresizingMaskIntoConstraints = NO;   //  手码的，要去掉 autoresizing
+    [self.view addSubview:grayView];
+    
+    NSDictionary *views = @{@"gray": grayView ,
+                            @"blue" : _blue,
+                            @"red" : _red};
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[red]-140-[gray(==red)]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[gray(==red)]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
+    
+    //  gray 和 blue 左对齐，偏移10
+    NSLayoutConstraint *lc = [NSLayoutConstraint constraintWithItem:grayView
+                                                          attribute:NSLayoutAttributeLeft
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_blue
+                                                          attribute:NSLayoutAttributeLeft
+                                                         multiplier:1            // view2.centerX * multiplier
+                                                           constant:10];
+    [self.view addConstraint:lc];
+}
+
+#pragma mark 子视图叠加
+- (void)brownInRed {
+    
+    UIView *brown = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    brown.backgroundColor = [UIColor brownColor];
+    brown.translatesAutoresizingMaskIntoConstraints = NO;
+    [_red addSubview:brown];
+    
+    NSDictionary *views = @{@"brown": brown ,
+                            @"red" : _red};
+    
+    [_red addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[brown(30)]"
+                                                               options:0
+                                                               metrics:nil
+                                                                  views:views]];
+    [_red addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[brown(30)]"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:views]];
 }
 
 - (void)push {
     ScrollCtrl *sc = [[ScrollCtrl alloc] initWithNibName:@"ScrollCtrl" bundle:nil];
     [self presentViewController:sc animated:YES completion:nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
