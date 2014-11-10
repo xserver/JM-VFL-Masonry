@@ -63,6 +63,8 @@
     [self grayAlignBlueLeft];
     
     [self brownInRed];
+    
+    [self orangeRatioRed];
 }
 
 #pragma mark 手写视图添加 VFL
@@ -213,6 +215,60 @@
                                                                  options:0
                                                                  metrics:nil
                                                                    views:views]];
+}
+
+#pragma mark 高宽比例 ratio
+- (void)orangeRatioRed {
+    
+    UIView *orange = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    orange.backgroundColor = [UIColor orangeColor];
+    orange.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:orange];
+    
+    
+    NSDictionary *views = @{@"orange": orange ,
+                            @"red" : _red};
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[red]-160-[orange(>=50)]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[orange(>=50)]"
+                                                                      options:NSLayoutFormatAlignAllLeft
+                                                                      metrics:nil
+                                                                        views:views]];
+    
+    NSLayoutConstraint *lc;
+//    他人的倍数
+//    lc = [NSLayoutConstraint constraintWithItem:orange
+//                                      attribute:NSLayoutAttributeWidth
+//                                      relatedBy:NSLayoutRelationEqual
+//                                         toItem:_red
+//                                      attribute:NSLayoutAttributeWidth
+//                                     multiplier:2
+//                                       constant:0];
+//    [self.view addConstraint:lc];
+//    
+//    lc = [NSLayoutConstraint constraintWithItem:orange
+//                                      attribute:NSLayoutAttributeHeight
+//                                      relatedBy:NSLayoutRelationEqual
+//                                         toItem:_red
+//                                      attribute:NSLayoutAttributeHeight
+//                                     multiplier:0.5
+//                                       constant:0];
+//    [self.view addConstraint:lc];
+    
+    //  自己的倍数
+    lc = [NSLayoutConstraint constraintWithItem:orange
+                                      attribute:NSLayoutAttributeWidth
+                                      relatedBy:NSLayoutRelationEqual
+                                         toItem:orange
+                                      attribute:NSLayoutAttributeHeight
+                                     multiplier:4
+                                       constant:0];
+    [self.view addConstraint:lc];
+    
 }
 
 - (void)push {

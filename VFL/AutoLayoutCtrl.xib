@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoLayoutCtrl">
@@ -33,13 +34,25 @@
                         <constraint firstAttribute="width" constant="80" id="egR-Qt-PNw"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高宽比 Aspect Ratio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSL-x6-4SU">
+                    <rect key="frame" x="223" y="261" width="155" height="78"/>
+                    <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aSL-x6-4SU" secondAttribute="height" multiplier="2:1" id="X57-CT-jwc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="RGx-V9-6fg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="03x-mG-9h8"/>
                 <constraint firstItem="RGx-V9-6fg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="1xF-Y3-rqk"/>
+                <constraint firstAttribute="centerY" secondItem="aSL-x6-4SU" secondAttribute="centerY" id="9QD-Iu-pb5"/>
                 <constraint firstItem="RGx-V9-6fg" firstAttribute="leading" secondItem="nlG-JQ-rVZ" secondAttribute="leading" id="Hao-qR-UO5"/>
                 <constraint firstItem="RGx-V9-6fg" firstAttribute="bottom" secondItem="nlG-JQ-rVZ" secondAttribute="bottom" constant="-100" id="lrh-Gv-qff"/>
+                <constraint firstAttribute="centerX" secondItem="aSL-x6-4SU" secondAttribute="centerX" id="lxC-Ag-jeM"/>
             </constraints>
         </view>
     </objects>

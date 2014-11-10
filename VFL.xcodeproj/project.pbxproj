@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0598ECB1A108E4000922A72 /* README.TXT in Resources */ = {isa = PBXBuildFile; fileRef = D0598ECA1A108E4000922A72 /* README.TXT */; };
 		D05FCE751A0DB92D00403247 /* AutoLayoutCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D05FCE731A0DB92D00403247 /* AutoLayoutCtrl.m */; };
 		D05FCE761A0DB92D00403247 /* AutoLayoutCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05FCE741A0DB92D00403247 /* AutoLayoutCtrl.xib */; };
 		D0EC67D41A08B4340068763E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D31A08B4340068763E /* main.m */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0598ECA1A108E4000922A72 /* README.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.TXT; sourceTree = "<group>"; };
 		D05FCE721A0DB92D00403247 /* AutoLayoutCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutCtrl.h; sourceTree = "<group>"; };
 		D05FCE731A0DB92D00403247 /* AutoLayoutCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutCtrl.m; sourceTree = "<group>"; };
 		D05FCE741A0DB92D00403247 /* AutoLayoutCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutCtrl.xib; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		D0EC67C51A08B4340068763E = {
 			isa = PBXGroup;
 			children = (
+				D0598ECA1A108E4000922A72 /* README.TXT */,
 				D0EC67D01A08B4340068763E /* VFL */,
 				D0EC67EA1A08B4340068763E /* VFLTests */,
 				D0EC67CF1A08B4340068763E /* Products */,
@@ -222,6 +225,7 @@
 				D05FCE761A0DB92D00403247 /* AutoLayoutCtrl.xib in Resources */,
 				D0EC67DD1A08B4340068763E /* Main.storyboard in Resources */,
 				D0EC67E21A08B4340068763E /* LaunchScreen.xib in Resources */,
+				D0598ECB1A108E4000922A72 /* README.TXT in Resources */,
 				D0EC67DF1A08B4340068763E /* Images.xcassets in Resources */,
 				D0EC67FB1A08E3150068763E /* ScrollCtrl.xib in Resources */,
 			);
