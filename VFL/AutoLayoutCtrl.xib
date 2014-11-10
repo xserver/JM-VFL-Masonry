@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoLayoutCtrl">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGx-V9-6fg">
+                    <rect key="frame" x="20" y="64" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="8Py-R0-hsH"/>
+                        <constraint firstAttribute="width" constant="100" id="snw-4S-ofY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Rk-84-7xL">
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlG-JQ-rVZ">
+                    <rect key="frame" x="20" y="184" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="cuE-aV-huz"/>
+                        <constraint firstAttribute="width" constant="80" id="egR-Qt-PNw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="RGx-V9-6fg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="03x-mG-9h8"/>
+                <constraint firstItem="RGx-V9-6fg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="1xF-Y3-rqk"/>
+                <constraint firstItem="RGx-V9-6fg" firstAttribute="leading" secondItem="nlG-JQ-rVZ" secondAttribute="leading" id="Hao-qR-UO5"/>
+                <constraint firstItem="RGx-V9-6fg" firstAttribute="bottom" secondItem="nlG-JQ-rVZ" secondAttribute="bottom" constant="-100" id="lrh-Gv-qff"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

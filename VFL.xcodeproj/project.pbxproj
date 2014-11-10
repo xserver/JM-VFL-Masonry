@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D05FCE751A0DB92D00403247 /* AutoLayoutCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D05FCE731A0DB92D00403247 /* AutoLayoutCtrl.m */; };
+		D05FCE761A0DB92D00403247 /* AutoLayoutCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05FCE741A0DB92D00403247 /* AutoLayoutCtrl.xib */; };
 		D0EC67D41A08B4340068763E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D31A08B4340068763E /* main.m */; };
 		D0EC67D71A08B4340068763E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D61A08B4340068763E /* AppDelegate.m */; };
 		D0EC67DA1A08B4340068763E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D91A08B4340068763E /* ViewController.m */; };
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D05FCE721A0DB92D00403247 /* AutoLayoutCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutCtrl.h; sourceTree = "<group>"; };
+		D05FCE731A0DB92D00403247 /* AutoLayoutCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutCtrl.m; sourceTree = "<group>"; };
+		D05FCE741A0DB92D00403247 /* AutoLayoutCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutCtrl.xib; sourceTree = "<group>"; };
 		D0EC67CE1A08B4340068763E /* VFL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EC67D21A08B4340068763E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EC67D31A08B4340068763E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,6 +105,9 @@
 				D0EC67F71A08E3150068763E /* ScrollCtrl.h */,
 				D0EC67F81A08E3150068763E /* ScrollCtrl.m */,
 				D0EC67F91A08E3150068763E /* ScrollCtrl.xib */,
+				D05FCE721A0DB92D00403247 /* AutoLayoutCtrl.h */,
+				D05FCE731A0DB92D00403247 /* AutoLayoutCtrl.m */,
+				D05FCE741A0DB92D00403247 /* AutoLayoutCtrl.xib */,
 			);
 			path = VFL;
 			sourceTree = "<group>";
@@ -211,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EC67FD1A08E3710068763E /* mm.jpg in Resources */,
+				D05FCE761A0DB92D00403247 /* AutoLayoutCtrl.xib in Resources */,
 				D0EC67DD1A08B4340068763E /* Main.storyboard in Resources */,
 				D0EC67E21A08B4340068763E /* LaunchScreen.xib in Resources */,
 				D0EC67DF1A08B4340068763E /* Images.xcassets in Resources */,
@@ -236,6 +245,7 @@
 				D0EC67D71A08B4340068763E /* AppDelegate.m in Sources */,
 				D0EC67D41A08B4340068763E /* main.m in Sources */,
 				D0EC67FA1A08E3150068763E /* ScrollCtrl.m in Sources */,
+				D05FCE751A0DB92D00403247 /* AutoLayoutCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

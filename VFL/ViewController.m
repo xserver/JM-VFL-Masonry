@@ -172,15 +172,26 @@
                                                                       metrics:nil
                                                                         views:views]];
     
-    //  gray 和 blue 左对齐，偏移10
+//    gray 的 right 和 blue left 偏移 2
+//    NSLayoutConstraint *lc = [NSLayoutConstraint constraintWithItem:grayView
+//                                                          attribute:NSLayoutAttributeRight
+//                                                          relatedBy:NSLayoutRelationEqual
+//                                                             toItem:_blue
+//                                                          attribute:NSLayoutAttributeLeft
+//                                                         multiplier:1            // view2.centerX * multiplier
+//                                                           constant:2];
+//    [self.view addConstraint:lc];
+    
+//    gray 的 left 和 blue left 偏移 12
     NSLayoutConstraint *lc = [NSLayoutConstraint constraintWithItem:grayView
                                                           attribute:NSLayoutAttributeLeft
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:_blue
                                                           attribute:NSLayoutAttributeLeft
                                                          multiplier:1            // view2.centerX * multiplier
-                                                           constant:10];
+                                                           constant:12];
     [self.view addConstraint:lc];
+
 }
 
 #pragma mark 子视图叠加
