@@ -35,7 +35,7 @@
     与父关系    |-50-[purpleBox]-50-|       Connection to Superview
  
  --自身
-    大小      [button(>=50)]  [button(>=70,<=100)]
+    大小     [button(>=50)]  [button(>=70,<=100)]
             [button(100@20)]    //  20 是 priority
  
  --两两
@@ -168,8 +168,11 @@
                                                                       options:0
                                                                       metrics:nil
                                                                         views:views]];
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[gray(==red)]"
+
+    NSString *H = @"H:[gray(==red)]";
+//    NSString *H = @"H:[gray(red)]";
+//    NSString *H = @"H:[gray(red/2)]";
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:H
                                                                       options:0
                                                                       metrics:nil
                                                                         views:views]];

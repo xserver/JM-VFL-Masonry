@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoLayoutCtrl">
@@ -44,12 +45,18 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="MYg-rl-Pxb">
+                    <rect key="frame" x="20" y="322" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="RGx-V9-6fg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="03x-mG-9h8"/>
                 <constraint firstItem="RGx-V9-6fg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="1xF-Y3-rqk"/>
+                <constraint firstItem="MYg-rl-Pxb" firstAttribute="top" secondItem="nlG-JQ-rVZ" secondAttribute="bottom" constant="58" id="4c7-V0-Ac8"/>
                 <constraint firstAttribute="centerY" secondItem="aSL-x6-4SU" secondAttribute="centerY" id="9QD-Iu-pb5"/>
+                <constraint firstItem="MYg-rl-Pxb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="12" id="HRe-nr-VhB"/>
                 <constraint firstItem="RGx-V9-6fg" firstAttribute="leading" secondItem="nlG-JQ-rVZ" secondAttribute="leading" id="Hao-qR-UO5"/>
                 <constraint firstItem="RGx-V9-6fg" firstAttribute="bottom" secondItem="nlG-JQ-rVZ" secondAttribute="bottom" constant="-100" id="lrh-Gv-qff"/>
                 <constraint firstAttribute="centerX" secondItem="aSL-x6-4SU" secondAttribute="centerX" id="lxC-Ag-jeM"/>
