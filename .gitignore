@@ -15,5 +15,5 @@ profile
 DerivedData
 .idea/
 .DS_Store
-
+Pods/
 *.xcuserstate
