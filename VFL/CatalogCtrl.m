@@ -7,6 +7,9 @@
 //
 
 #import "CatalogCtrl.h"
+#import "IBAutoLayoutCtrl.h"
+#import "VFLCtrl.h"
+#import "MasonryCtrl.h"
 
 @interface CatalogCtrl ()
 
@@ -20,15 +23,15 @@
 }
 
 - (IBAction)VFL:(id)sender {
-    
+    [self.navigationController pushViewController:VFLCtrl.new animated:YES];
 }
 
 - (IBAction)Masonry:(id)sender {
-    
+    [self.navigationController pushViewController:MasonryCtrl.new animated:YES];
 }
 
 - (IBAction)AutoLayout:(id)sender {
-    
+    [self.navigationController pushViewController:IBAutoLayoutCtrl.new animated:YES];
 }
 
 @end

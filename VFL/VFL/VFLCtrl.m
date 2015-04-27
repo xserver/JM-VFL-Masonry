@@ -6,10 +6,10 @@
 //  Copyright (c) 2014年 pitaya. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "VFLCtrl.h"
 #import "ScrollCtrl.h"
 
-@interface ViewController ()
+@interface VFLCtrl ()
 @property (strong, nonatomic) UIView *blue;
 @property (weak, nonatomic) IBOutlet UIView *green;
 @property (weak, nonatomic) IBOutlet UIView *red;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation ViewController
+@implementation VFLCtrl
 
 /*
  --默认
