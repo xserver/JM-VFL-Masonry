@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2345E730403EFD89ADB25B56 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3FA4B4BD5283B99E8CEA91 /* libPods.a */; };
-		D0598ECB1A108E4000922A72 /* README.TXT in Resources */ = {isa = PBXBuildFile; fileRef = D0598ECA1A108E4000922A72 /* README.TXT */; };
-		D05FCE751A0DB92D00403247 /* AutoLayoutCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D05FCE731A0DB92D00403247 /* AutoLayoutCtrl.m */; };
-		D05FCE761A0DB92D00403247 /* AutoLayoutCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05FCE741A0DB92D00403247 /* AutoLayoutCtrl.xib */; };
+		D00E4B951AEDD75100B41932 /* MasonryCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D00E4B941AEDD75100B41932 /* MasonryCtrl.m */; };
+		D05FCE751A0DB92D00403247 /* IBAutoLayoutCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D05FCE731A0DB92D00403247 /* IBAutoLayoutCtrl.m */; };
+		D05FCE761A0DB92D00403247 /* IBAutoLayoutCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05FCE741A0DB92D00403247 /* IBAutoLayoutCtrl.xib */; };
 		D0EC67D41A08B4340068763E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D31A08B4340068763E /* main.m */; };
 		D0EC67D71A08B4340068763E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D61A08B4340068763E /* AppDelegate.m */; };
 		D0EC67DA1A08B4340068763E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D91A08B4340068763E /* ViewController.m */; };
@@ -36,10 +36,12 @@
 /* Begin PBXFileReference section */
 		5F43657234C5B6662C29D408 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BC637CC81CB6C712C5BDE339 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		D0598ECA1A108E4000922A72 /* README.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.TXT; sourceTree = "<group>"; };
-		D05FCE721A0DB92D00403247 /* AutoLayoutCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutCtrl.h; sourceTree = "<group>"; };
-		D05FCE731A0DB92D00403247 /* AutoLayoutCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutCtrl.m; sourceTree = "<group>"; };
-		D05FCE741A0DB92D00403247 /* AutoLayoutCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutCtrl.xib; sourceTree = "<group>"; };
+		D00E4B931AEDD75100B41932 /* MasonryCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryCtrl.h; sourceTree = "<group>"; };
+		D00E4B941AEDD75100B41932 /* MasonryCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryCtrl.m; sourceTree = "<group>"; };
+		D00E4B961AEDD8A000B41932 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D05FCE721A0DB92D00403247 /* IBAutoLayoutCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAutoLayoutCtrl.h; sourceTree = "<group>"; };
+		D05FCE731A0DB92D00403247 /* IBAutoLayoutCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAutoLayoutCtrl.m; sourceTree = "<group>"; };
+		D05FCE741A0DB92D00403247 /* IBAutoLayoutCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBAutoLayoutCtrl.xib; sourceTree = "<group>"; };
 		D0EC67CE1A08B4340068763E /* VFL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EC67D21A08B4340068763E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EC67D31A08B4340068763E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,10 +98,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D00E4B921AEDD73000B41932 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				D00E4B931AEDD75100B41932 /* MasonryCtrl.h */,
+				D00E4B941AEDD75100B41932 /* MasonryCtrl.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
 		D0EC67C51A08B4340068763E = {
 			isa = PBXGroup;
 			children = (
-				D0598ECA1A108E4000922A72 /* README.TXT */,
+				D00E4B961AEDD8A000B41932 /* README.md */,
 				D0EC67D01A08B4340068763E /* VFL */,
 				D0EC67EA1A08B4340068763E /* VFLTests */,
 				D0EC67CF1A08B4340068763E /* Products */,
@@ -122,9 +133,10 @@
 			children = (
 				D0EC67D51A08B4340068763E /* AppDelegate.h */,
 				D0EC67D61A08B4340068763E /* AppDelegate.m */,
-				D05FCE721A0DB92D00403247 /* AutoLayoutCtrl.h */,
-				D05FCE731A0DB92D00403247 /* AutoLayoutCtrl.m */,
-				D05FCE741A0DB92D00403247 /* AutoLayoutCtrl.xib */,
+				D00E4B921AEDD73000B41932 /* Masonry */,
+				D05FCE721A0DB92D00403247 /* IBAutoLayoutCtrl.h */,
+				D05FCE731A0DB92D00403247 /* IBAutoLayoutCtrl.m */,
+				D05FCE741A0DB92D00403247 /* IBAutoLayoutCtrl.xib */,
 				D0EC67DE1A08B4340068763E /* Images.xcassets */,
 				D0EC67E01A08B4340068763E /* LaunchScreen.xib */,
 				D0EC67DB1A08B4340068763E /* Main.storyboard */,
@@ -248,10 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EC67FD1A08E3710068763E /* mm.jpg in Resources */,
-				D05FCE761A0DB92D00403247 /* AutoLayoutCtrl.xib in Resources */,
+				D05FCE761A0DB92D00403247 /* IBAutoLayoutCtrl.xib in Resources */,
 				D0EC67DD1A08B4340068763E /* Main.storyboard in Resources */,
 				D0EC67E21A08B4340068763E /* LaunchScreen.xib in Resources */,
-				D0598ECB1A108E4000922A72 /* README.TXT in Resources */,
 				D0EC67DF1A08B4340068763E /* Images.xcassets in Resources */,
 				D0EC67FB1A08E3150068763E /* ScrollCtrl.xib in Resources */,
 			);
@@ -304,11 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00E4B951AEDD75100B41932 /* MasonryCtrl.m in Sources */,
 				D0EC67DA1A08B4340068763E /* ViewController.m in Sources */,
 				D0EC67D71A08B4340068763E /* AppDelegate.m in Sources */,
 				D0EC67D41A08B4340068763E /* main.m in Sources */,
 				D0EC67FA1A08E3150068763E /* ScrollCtrl.m in Sources */,
-				D05FCE751A0DB92D00403247 /* AutoLayoutCtrl.m in Sources */,
+				D05FCE751A0DB92D00403247 /* IBAutoLayoutCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

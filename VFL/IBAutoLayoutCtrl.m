@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 pitaya. All rights reserved.
 //
 
-#import "AutoLayoutCtrl.h"
+#import "IBAutoLayoutCtrl.h"
 
-@interface AutoLayoutCtrl ()
+@interface IBAutoLayoutCtrl ()
 
 @end
 
-@implementation AutoLayoutCtrl
+@implementation IBAutoLayoutCtrl
 
 - (void)viewDidLoad {
     [super viewDidLoad];
