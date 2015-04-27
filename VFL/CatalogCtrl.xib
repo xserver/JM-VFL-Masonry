@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CatalogCtrl">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsJ-fK-gKA">
+                    <rect key="frame" x="30" y="278" width="530" height="44"/>
+                    <color key="backgroundColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="s36-i6-IfR"/>
+                    </constraints>
+                    <state key="normal" title="VFL">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="VFL:" destination="-1" eventType="touchUpInside" id="UCg-J9-day"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAn-9t-Cyi">
+                    <rect key="frame" x="30" y="214" width="530" height="44"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="lAI-vp-ZsO"/>
+                    </constraints>
+                    <state key="normal" title="IBAutoLayout">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="AutoLayout:" destination="-1" eventType="touchUpInside" id="PN5-ud-4bJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Org-KQ-OdK">
+                    <rect key="frame" x="30" y="342" width="530" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="vUO-am-3ZZ"/>
+                    </constraints>
+                    <state key="normal" title="Masonry">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="Masonry:" destination="-1" eventType="touchUpInside" id="nvM-vE-blW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="IsJ-fK-gKA" secondAttribute="trailing" constant="40" id="0Rh-v4-fJv"/>
+                <constraint firstAttribute="centerX" secondItem="IsJ-fK-gKA" secondAttribute="centerX" id="7I3-He-dW1"/>
+                <constraint firstItem="IsJ-fK-gKA" firstAttribute="top" secondItem="bAn-9t-Cyi" secondAttribute="bottom" constant="20" id="81h-QM-YGk"/>
+                <constraint firstItem="IsJ-fK-gKA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="FTj-BS-wAN"/>
+                <constraint firstAttribute="centerY" secondItem="IsJ-fK-gKA" secondAttribute="centerY" id="HvV-fG-FCN"/>
+                <constraint firstItem="IsJ-fK-gKA" firstAttribute="trailing" secondItem="bAn-9t-Cyi" secondAttribute="trailing" id="InU-Ki-CVO"/>
+                <constraint firstItem="Org-KQ-OdK" firstAttribute="top" secondItem="IsJ-fK-gKA" secondAttribute="bottom" constant="20" id="K1L-HG-jiI"/>
+                <constraint firstAttribute="trailing" secondItem="bAn-9t-Cyi" secondAttribute="trailing" constant="40" id="Qpb-UU-qre"/>
+                <constraint firstItem="Org-KQ-OdK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="UTn-dR-gj0"/>
+                <constraint firstItem="bAn-9t-Cyi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="UcS-7m-q0l"/>
+                <constraint firstItem="bAn-9t-Cyi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Vkw-L1-fNM"/>
+                <constraint firstAttribute="trailing" secondItem="Org-KQ-OdK" secondAttribute="trailing" constant="40" id="d3N-Yx-W13"/>
+                <constraint firstItem="Org-KQ-OdK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="faW-TR-6Qv"/>
+                <constraint firstItem="IsJ-fK-gKA" firstAttribute="leading" secondItem="bAn-9t-Cyi" secondAttribute="leading" id="jng-Pj-klz"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="0Rh-v4-fJv"/>
+                    <exclude reference="7I3-He-dW1"/>
+                    <exclude reference="FTj-BS-wAN"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

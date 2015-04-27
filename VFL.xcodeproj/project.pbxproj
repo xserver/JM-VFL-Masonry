@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2345E730403EFD89ADB25B56 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3FA4B4BD5283B99E8CEA91 /* libPods.a */; };
 		D00E4B951AEDD75100B41932 /* MasonryCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D00E4B941AEDD75100B41932 /* MasonryCtrl.m */; };
+		D00E4B9A1AEDDCE500B41932 /* CatalogCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D00E4B981AEDDCE500B41932 /* CatalogCtrl.m */; };
+		D00E4B9B1AEDDCE500B41932 /* CatalogCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00E4B991AEDDCE500B41932 /* CatalogCtrl.xib */; };
 		D05FCE751A0DB92D00403247 /* IBAutoLayoutCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D05FCE731A0DB92D00403247 /* IBAutoLayoutCtrl.m */; };
 		D05FCE761A0DB92D00403247 /* IBAutoLayoutCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05FCE741A0DB92D00403247 /* IBAutoLayoutCtrl.xib */; };
 		D0EC67D41A08B4340068763E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D31A08B4340068763E /* main.m */; };
@@ -39,6 +41,9 @@
 		D00E4B931AEDD75100B41932 /* MasonryCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryCtrl.h; sourceTree = "<group>"; };
 		D00E4B941AEDD75100B41932 /* MasonryCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryCtrl.m; sourceTree = "<group>"; };
 		D00E4B961AEDD8A000B41932 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D00E4B971AEDDCE500B41932 /* CatalogCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogCtrl.h; sourceTree = "<group>"; };
+		D00E4B981AEDDCE500B41932 /* CatalogCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogCtrl.m; sourceTree = "<group>"; };
+		D00E4B991AEDDCE500B41932 /* CatalogCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatalogCtrl.xib; sourceTree = "<group>"; };
 		D05FCE721A0DB92D00403247 /* IBAutoLayoutCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBAutoLayoutCtrl.h; sourceTree = "<group>"; };
 		D05FCE731A0DB92D00403247 /* IBAutoLayoutCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBAutoLayoutCtrl.m; sourceTree = "<group>"; };
 		D05FCE741A0DB92D00403247 /* IBAutoLayoutCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBAutoLayoutCtrl.xib; sourceTree = "<group>"; };
@@ -133,6 +138,9 @@
 			children = (
 				D0EC67D51A08B4340068763E /* AppDelegate.h */,
 				D0EC67D61A08B4340068763E /* AppDelegate.m */,
+				D00E4B971AEDDCE500B41932 /* CatalogCtrl.h */,
+				D00E4B981AEDDCE500B41932 /* CatalogCtrl.m */,
+				D00E4B991AEDDCE500B41932 /* CatalogCtrl.xib */,
 				D00E4B921AEDD73000B41932 /* Masonry */,
 				D05FCE721A0DB92D00403247 /* IBAutoLayoutCtrl.h */,
 				D05FCE731A0DB92D00403247 /* IBAutoLayoutCtrl.m */,
@@ -264,6 +272,7 @@
 				D0EC67DD1A08B4340068763E /* Main.storyboard in Resources */,
 				D0EC67E21A08B4340068763E /* LaunchScreen.xib in Resources */,
 				D0EC67DF1A08B4340068763E /* Images.xcassets in Resources */,
+				D00E4B9B1AEDDCE500B41932 /* CatalogCtrl.xib in Resources */,
 				D0EC67FB1A08E3150068763E /* ScrollCtrl.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +329,7 @@
 				D0EC67D71A08B4340068763E /* AppDelegate.m in Sources */,
 				D0EC67D41A08B4340068763E /* main.m in Sources */,
 				D0EC67FA1A08E3150068763E /* ScrollCtrl.m in Sources */,
+				D00E4B9A1AEDDCE500B41932 /* CatalogCtrl.m in Sources */,
 				D05FCE751A0DB92D00403247 /* IBAutoLayoutCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
