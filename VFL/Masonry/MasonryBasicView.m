@@ -11,7 +11,9 @@
 
 @implementation MasonryBasicView
 /**
+ 
  top.left.bottom.right
+ 
  center.centerX.centerY
  
  edges
@@ -34,7 +36,6 @@
     [self addSubview:greenView];
     
 
-    
     UIView *superview = self;
     int padding = 10;
 

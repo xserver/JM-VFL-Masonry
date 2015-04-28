@@ -28,7 +28,8 @@
     [super viewDidLoad];
     
     _list = @[
-              @"MasonryBasicView"
+              @"MasonryBasicView",
+              @"MasonryDatumLineView"
               ];
     
     [self.view addSubview:self.tab];
