@@ -15,6 +15,8 @@
 		D00E4BAD1AEE45D500B41932 /* IBAutoLayoutCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00E4BA71AEE45D500B41932 /* IBAutoLayoutCtrl.xib */; };
 		D00E4BAE1AEE45D500B41932 /* VFLCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D00E4BAA1AEE45D500B41932 /* VFLCtrl.m */; };
 		D00E4BAF1AEE45D500B41932 /* VFLCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00E4BAB1AEE45D500B41932 /* VFLCtrl.xib */; };
+		D09B08ED1AEF1E8900AA0EA6 /* MasonryBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B08EC1AEF1E8900AA0EA6 /* MasonryBasicView.m */; };
+		D09B08F11AEF274F00AA0EA6 /* MasonryDatumLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B08F01AEF274F00AA0EA6 /* MasonryDatumLineView.m */; };
 		D0EC67D41A08B4340068763E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D31A08B4340068763E /* main.m */; };
 		D0EC67D71A08B4340068763E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D61A08B4340068763E /* AppDelegate.m */; };
 		D0EC67DF1A08B4340068763E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EC67DE1A08B4340068763E /* Images.xcassets */; };
@@ -50,6 +52,13 @@
 		D00E4BA91AEE45D500B41932 /* VFLCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFLCtrl.h; sourceTree = "<group>"; };
 		D00E4BAA1AEE45D500B41932 /* VFLCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFLCtrl.m; sourceTree = "<group>"; };
 		D00E4BAB1AEE45D500B41932 /* VFLCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VFLCtrl.xib; sourceTree = "<group>"; };
+		D09B08EA1AEF1DA100AA0EA6 /* MasonryNotes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MasonryNotes.md; sourceTree = "<group>"; };
+		D09B08EB1AEF1E8900AA0EA6 /* MasonryBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryBasicView.h; sourceTree = "<group>"; };
+		D09B08EC1AEF1E8900AA0EA6 /* MasonryBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryBasicView.m; sourceTree = "<group>"; };
+		D09B08EE1AEF1EFB00AA0EA6 /* VFL.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VFL.pch; sourceTree = "<group>"; };
+		D09B08EF1AEF274F00AA0EA6 /* MasonryDatumLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryDatumLineView.h; sourceTree = "<group>"; };
+		D09B08F01AEF274F00AA0EA6 /* MasonryDatumLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryDatumLineView.m; sourceTree = "<group>"; };
+		D09B08F21AEF2E7200AA0EA6 /* MasonryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryHelper.h; sourceTree = "<group>"; };
 		D0EC67CE1A08B4340068763E /* VFL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EC67D21A08B4340068763E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EC67D31A08B4340068763E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,8 +115,14 @@
 		D00E4B921AEDD73000B41932 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
+				D09B08EA1AEF1DA100AA0EA6 /* MasonryNotes.md */,
 				D00E4B931AEDD75100B41932 /* MasonryCtrl.h */,
 				D00E4B941AEDD75100B41932 /* MasonryCtrl.m */,
+				D09B08EB1AEF1E8900AA0EA6 /* MasonryBasicView.h */,
+				D09B08EC1AEF1E8900AA0EA6 /* MasonryBasicView.m */,
+				D09B08EF1AEF274F00AA0EA6 /* MasonryDatumLineView.h */,
+				D09B08F01AEF274F00AA0EA6 /* MasonryDatumLineView.m */,
+				D09B08F21AEF2E7200AA0EA6 /* MasonryHelper.h */,
 			);
 			path = Masonry;
 			sourceTree = "<group>";
@@ -180,6 +195,7 @@
 			children = (
 				D0EC67D21A08B4340068763E /* Info.plist */,
 				D0EC67D31A08B4340068763E /* main.m */,
+				D09B08EE1AEF1EFB00AA0EA6 /* VFL.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -343,7 +359,9 @@
 				D00E4B951AEDD75100B41932 /* MasonryCtrl.m in Sources */,
 				D0EC67D71A08B4340068763E /* AppDelegate.m in Sources */,
 				D0EC67D41A08B4340068763E /* main.m in Sources */,
+				D09B08F11AEF274F00AA0EA6 /* MasonryDatumLineView.m in Sources */,
 				D0EC67FA1A08E3150068763E /* ScrollCtrl.m in Sources */,
+				D09B08ED1AEF1E8900AA0EA6 /* MasonryBasicView.m in Sources */,
 				D00E4BAE1AEE45D500B41932 /* VFLCtrl.m in Sources */,
 				D00E4BAC1AEE45D500B41932 /* IBAutoLayoutCtrl.m in Sources */,
 				D00E4B9A1AEDDCE500B41932 /* CatalogCtrl.m in Sources */,
@@ -461,6 +479,7 @@
 			baseConfigurationReference = BC637CC81CB6C712C5BDE339 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = VFL/VFL.pch;
 				INFOPLIST_FILE = VFL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,6 +491,7 @@
 			baseConfigurationReference = 5F43657234C5B6662C29D408 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = VFL/VFL.pch;
 				INFOPLIST_FILE = VFL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

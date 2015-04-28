@@ -33,7 +33,8 @@
     
     
     UIScrollView *scrollView;
-    UIImageView *imageView;
+//    UIImageView *imageView;
+    
     scrollView  = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, contentWidth, contentHeight)];
     [scrollView addSubview:contentView];
     
