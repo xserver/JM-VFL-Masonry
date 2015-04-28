@@ -8,7 +8,11 @@
 
 #import "MasonryDatumLineView.h"
 #import "MasonryHelper.h"
-
+/**
+ trailing       左
+ baseline       底
+ leading        右
+ */
 @implementation MasonryDatumLineView
 
 - (id)init {
@@ -18,15 +22,12 @@
     UIView *redView = UIViewWithColor(UIColor.redColor);
     [self addSubview:redView];
     
-//    UIView *blueView = UIViewWithColor(UIColor.blueColor);
-//    [self addSubview:blueView];
-//
-//    UIView *greenView = UIViewWithColor(UIColor.greenColor);
-//    [self addSubview:greenView];
+    UIView *blueView = UIViewWithColor(UIColor.blueColor);
+    [self addSubview:blueView];
+
+    UIView *greenView = UIViewWithColor(UIColor.greenColor);
+    [self addSubview:greenView];
     
-    
-    UIView *superview = self;
-    int padding = 10;
     
     [redView mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -37,16 +38,17 @@
 //        make.baseline.equalTo(superview.centerY);
     }];
     
-//    [greenView makeConstraints:^(MASConstraintMaker *make) {
-//
-//    }];
-
-//    [blueView makeConstraints:^(MASConstraintMaker *make) {
-//        //  #   center = X + Y
-//        make.center.equalTo(CGPointMake(0, 0));
-//        //        make.centerX.centerY.equalTo(0);
-//        make.width.height.equalTo(200);
-//    }];
+    [greenView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(blueView.bottom).offset(20);
+        make.width.height.equalTo(100);
+        make.leading.offset(40);
+    }];
+    
+    [blueView makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(40);
+        make.height.equalTo(100);
+        make.trailing.offset(-40);
+    }];
     
     return self;
 }
