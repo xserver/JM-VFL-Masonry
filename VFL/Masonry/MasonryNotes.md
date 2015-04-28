@@ -8,9 +8,9 @@
 
 
 constraint
-    make
-    update 
-    remake
+    make        添加  add
+    update      更新  
+    remake      去掉重做
 
 constant
 edges insets
