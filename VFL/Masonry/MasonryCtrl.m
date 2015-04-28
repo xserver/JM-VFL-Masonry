@@ -10,20 +10,28 @@
 
 #import "MasonryCtrl.h"
 #import "MasonryBasicView.h"
-//#import "<#header#>"
+#import "MasonryExampleCtrl.h"
 
 @interface MasonryCtrl ()
-
+@property (nonatomic, strong) UITableView *tab;
+@property (nonatomic, strong) NSArray *list;
 @end
 
 @implementation MasonryCtrl
-- (void)loadView {
-    self.view = [[MasonryBasicView alloc] init];
-    self.view.backgroundColor = [UIColor whiteColor];
-}
+
+//- (void)loadView {
+//    self.view = [[MasonryBasicView alloc] init];
+//    self.view.backgroundColor = [UIColor whiteColor];
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _list = @[
+              @"MasonryBasicView"
+              ];
+    
+    [self.view addSubview:self.tab];
 }
 
 #ifdef __IPHONE_7_0
@@ -31,4 +39,45 @@
     return UIRectEdgeNone;
 }
 #endif
+
+
+
+#pragma mark - Create Table
+- (UITableView *)tab {
+    if (_tab == nil) {
+        CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+        _tab = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
+        _tab.dataSource = self;
+        _tab.delegate = self;
+    }
+    
+    return _tab;
+}
+
+
+#pragma mark - UITableView DataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _list.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *identifier = @"MasonryCatalogCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
+    cell.textLabel.text = [_list objectAtIndex:indexPath.row];
+    return cell;
+}
+
+#pragma mark - UITableView Delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *name = [_list objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:[MasonryExampleCtrl makeWithClassName:name] animated:YES];
+
+}
+
 @end

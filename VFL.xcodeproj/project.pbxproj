@@ -17,6 +17,7 @@
 		D00E4BAF1AEE45D500B41932 /* VFLCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00E4BAB1AEE45D500B41932 /* VFLCtrl.xib */; };
 		D09B08ED1AEF1E8900AA0EA6 /* MasonryBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B08EC1AEF1E8900AA0EA6 /* MasonryBasicView.m */; };
 		D09B08F11AEF274F00AA0EA6 /* MasonryDatumLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B08F01AEF274F00AA0EA6 /* MasonryDatumLineView.m */; };
+		D09B08F51AEF341600AA0EA6 /* MasonryExampleCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D09B08F41AEF341600AA0EA6 /* MasonryExampleCtrl.m */; };
 		D0EC67D41A08B4340068763E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D31A08B4340068763E /* main.m */; };
 		D0EC67D71A08B4340068763E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EC67D61A08B4340068763E /* AppDelegate.m */; };
 		D0EC67DF1A08B4340068763E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0EC67DE1A08B4340068763E /* Images.xcassets */; };
@@ -59,6 +60,8 @@
 		D09B08EF1AEF274F00AA0EA6 /* MasonryDatumLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryDatumLineView.h; sourceTree = "<group>"; };
 		D09B08F01AEF274F00AA0EA6 /* MasonryDatumLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryDatumLineView.m; sourceTree = "<group>"; };
 		D09B08F21AEF2E7200AA0EA6 /* MasonryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryHelper.h; sourceTree = "<group>"; };
+		D09B08F31AEF341600AA0EA6 /* MasonryExampleCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryExampleCtrl.h; sourceTree = "<group>"; };
+		D09B08F41AEF341600AA0EA6 /* MasonryExampleCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryExampleCtrl.m; sourceTree = "<group>"; };
 		D0EC67CE1A08B4340068763E /* VFL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EC67D21A08B4340068763E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EC67D31A08B4340068763E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				D09B08EA1AEF1DA100AA0EA6 /* MasonryNotes.md */,
 				D00E4B931AEDD75100B41932 /* MasonryCtrl.h */,
 				D00E4B941AEDD75100B41932 /* MasonryCtrl.m */,
+				D09B08F31AEF341600AA0EA6 /* MasonryExampleCtrl.h */,
+				D09B08F41AEF341600AA0EA6 /* MasonryExampleCtrl.m */,
 				D09B08EB1AEF1E8900AA0EA6 /* MasonryBasicView.h */,
 				D09B08EC1AEF1E8900AA0EA6 /* MasonryBasicView.m */,
 				D09B08EF1AEF274F00AA0EA6 /* MasonryDatumLineView.h */,
@@ -357,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00E4B951AEDD75100B41932 /* MasonryCtrl.m in Sources */,
+				D09B08F51AEF341600AA0EA6 /* MasonryExampleCtrl.m in Sources */,
 				D0EC67D71A08B4340068763E /* AppDelegate.m in Sources */,
 				D0EC67D41A08B4340068763E /* main.m in Sources */,
 				D09B08F11AEF274F00AA0EA6 /* MasonryDatumLineView.m in Sources */,
